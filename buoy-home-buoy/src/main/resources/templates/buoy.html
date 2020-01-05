@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>浮标，带来方向！！</title>
+
+<meta name="description"
+	content="Source code generated using layoutit.com">
+<meta name="author" content="LayoutIt!">
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-12" style="margin-top: 5px;">
+						<div class="row">
+							<div class="col-md-8">
+								<nav class="navbar navbar-expand-lg navbar-light bg-light">
+									<button class="navbar-toggler" type="button"
+										data-toggle="collapse"
+										data-target="#bs-example-navbar-collapse-1">
+										<span class="navbar-toggler-icon"></span>
+									</button>
+									<a class="navbar-brand"
+										th:href="@{http://localhost:8131/index(usersname=${usersname})}">菜单</a>
+									<div class="collapse navbar-collapse"
+										id="bs-example-navbar-collapse-1">
+										<ul class="navbar-nav">
+											<li class="nav-item active"><a class="nav-link"
+												th:href="@{http://localhost:8141/go(usersname=${usersname})}">启航
+													<span class="sr-only">(current)</span>
+											</a></li>
+											<li class="nav-item"><a class="nav-link"
+												th:href="@{http://localhost:8161/buoy(usersname=${usersname})}">浮标</a>
+											</li>
+											<li class="nav-item"><a class="nav-link"
+												th:href="@{http://localhost:8191/news(usersname=${usersname},method=viewpager,value=frist_viewpager,title=${fristViewPagerTitle})}">新闻</a>
+											</li>
+											<li class="nav-item"><a class="nav-link"
+												th:href="@{http://localhost:8221/about(usersname=${usersname})}">关于我们</a>
+											</li>
+										</ul>
+									</div>
+								</nav>
+							</div>
+							<a th:href="@{http://localhost:8201/set(usersname=${usersname})}">
+								<div class="col-md-4">
+									<img alt="图片因网络问题无法显示" id="img" class="rounded-circle"
+										height="50" width="50">
+								</div>
+								<h3 th:text="${nickname}"></h3>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="jumbotron">
+									<h2>周报</h2>
+									<p>
+										一周报表<br> 同行者的观点<br> 为您提供学习航程中的一个方向
+									</p>
+									<p>
+										<a class="btn btn-primary btn-large"
+											th:href="@{http://localhost:8171/detail(usersname=${usersname},action=weekly)}">戳此查看!!</a>
+									</p>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="jumbotron">
+									<h2>月报</h2>
+									<p>
+										一月报表<br> 同行者的观点<br> 为您提供学习航程中的一个方向
+									</p>
+									<p>
+										<a class="btn btn-primary btn-large"
+											th:href="@{http://localhost:8171/detail(usersname=${usersname},action=monthly)}">戳此查看!!</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="jumbotron">
+									<h2>季报</h2>
+									<p>
+										一季报表<br> 同行者的观点<br> 为您提供学习航程中的一个方向
+									</p>
+									<p>
+										<a class="btn btn-primary btn-large"
+											th:href="@{http://localhost:8171/detail(usersname=${usersname},action=quarterly)}">戳此查看!!</a>
+									</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="jumbotron">
+									<h2>半年报</h2>
+									<p>
+										半年报表<br> 同行者的观点<br> 为您提供学习航程中的一个方向
+									</p>
+									<p>
+										<a class="btn btn-primary btn-large"
+											th:href="@{http://localhost:8171/detail(usersname=${usersname},action=semi)}">戳此查看!!</a>
+									</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="jumbotron">
+									<h2>年报</h2>
+									<p>
+										一年报表<br> 同行者的观点<br> 为您提供学习航程中的一个方向
+									</p>
+									<p>
+										<a class="btn btn-primary btn-large"
+											th:href="@{http://localhost:8171/detail(usersname=${usersname},action=annual)}">戳此查看!!</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/scripts.js"></script>
+
+	<script th:inline="javascript">       
+		document.getElementById('img').src=[[${img}]];
+	</script>
+
+</body>
+</html>

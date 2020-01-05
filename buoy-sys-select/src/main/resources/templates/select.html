@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>浮标后台管理界面</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row" style="margin-top: 40px;margin-bottom: 20px;">
+				<div class="col-md-8">
+					<h1>
+						浮标后台管理界面-<font th:text="${key}"></font>查询
+					</h1>
+				</div>
+				<div class="col-md-4" style="text-align: right;">
+					<h3>
+						<a th:href="@{http://localhost:8231/login}">退出>></a>
+					</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div id="card-735176">
+						<div class="card">
+							<div class="card-header">
+								 <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-735176" href="#card-element-462436">轮播图编辑</a>
+							</div>
+							<div id="card-element-462436" class="collapse">
+								<div class="card-body" style="margin-top: 15px;margin-left: 15px;">
+									<a th:href="@{http://localhost:8241/insert?method=viewpager&value=frist_viewpager}">添加首张轮播图</a>
+								</div>
+								<div class="card-body" style="margin-top: 15px;margin-left: 15px;">
+									<a th:href="@{http://localhost:8251/select?method=viewpager&value=frist_viewpager&pageNum=1}">管理首张轮播图</a>
+								</div>
+								<div class="card-body" style="margin-top: 15px;margin-left: 15px;">
+									<a th:href="@{http://localhost:8241/insert?method=viewpager&value=edit}">添加新的轮播图</a>
+								</div>
+								<div class="card-body" style="margin-top: 15px;margin-left: 15px;">
+									<a th:href="@{http://localhost:8251/select?method=viewpager&value=edit&pageNum=1}">管理已有轮播图</a>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header">
+								 <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-735176" href="#card-element-543349">新闻管理</a>
+							</div>
+							<div id="card-element-543349" class="collapse">
+								<div class="card-body" style="margin-top: 15px;margin-left: 15px;">
+									<a th:href="@{http://localhost:8241/insert?method=news&value=horizon}">添加视野港新闻</a>
+								</div>
+								<div class="card-body" style="margin-top: 15px;margin-left: 15px;">
+									<a th:href="@{http://localhost:8251/select?method=news&value=horizon&pageNum=1}">管理视野港新闻</a>
+								</div>
+								<div class="card-body" style="margin-top: 15px;margin-left: 15px;">
+									<a th:href="@{http://localhost:8241/insert?method=news&value=ability}">添加能力港新闻</a>
+								</div>
+								<div class="card-body" style="margin-top: 15px;margin-left: 15px;">
+									<a th:href="@{http://localhost:8251/select?method=news&value=ability&pageNum=1}">管理能力港新闻</a>
+								</div>
+								<div class="card-body" style="margin-top: 15px;margin-left: 15px;">
+									<a th:href="@{http://localhost:8241/insert?method=news&value=social}">添加人文社科港新闻</a>
+								</div>
+								<div class="card-body" style="margin-top: 15px;margin-left: 15px;">
+									<a th:href="@{http://localhost:8251/select?method=news&value=social&pageNum=1}">管理人文社科港新闻</a>
+								</div>
+								<div class="card-body" style="margin-top: 15px;margin-left: 15px;">
+									<a th:href="@{http://localhost:8241/insert?method=news&value=business}">添加商业港新闻</a>
+								</div>
+								<div class="card-body" style="margin-top: 15px;margin-left: 15px;">
+									<a th:href="@{http://localhost:8251/select?method=news&value=business&pageNum=1}">管理商业港新闻</a>
+								</div>
+								<div class="card-body" style="margin-top: 15px;margin-left: 15px;">
+									<a th:href="@{http://localhost:8241/insert?method=news&value=science}">添加科学港新闻</a>
+								</div>
+								<div class="card-body" style="margin-top: 15px;margin-left: 15px;">
+									<a th:href="@{http://localhost:8251/select?method=news&value=science&pageNum=1}">管理科学港新闻</a>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-header">
+								 <a class="card-link collapsed" data-toggle="collapse" data-parent="#card-735176" href="#card-element-543348">信息管理</a>
+							</div>
+							<div id="card-element-543348" class="collapse">
+								<div class="card-body" style="margin-top: 15px;margin-left: 15px;">
+									<a th:href="@{http://localhost:8241/insert?method=msg&value=horizon}">添加视野港信息</a>
+								</div>
+								<div class="card-body" style="margin-top: 15px;margin-left: 15px;">
+									<a th:href="@{http://localhost:8251/select?method=msg&value=horizon&pageNum=1}">管理视野港信息</a>
+								</div>
+								<div class="card-body" style="margin-top: 15px;margin-left: 15px;">
+									<a th:href="@{http://localhost:8241/insert?method=msg&value=ability}">添加能力港信息</a>
+								</div>
+								<div class="card-body" style="margin-top: 15px;margin-left: 15px;">
+									<a th:href="@{http://localhost:8251/select?method=msg&value=ability&pageNum=1}">管理能力港信息</a>
+								</div>
+								<div class="card-body" style="margin-top: 15px;margin-left: 15px;">
+									<a th:href="@{http://localhost:8241/insert?method=msg&value=social}">添加人文社科港信息</a>
+								</div>
+								<div class="card-body" style="margin-top: 15px;margin-left: 15px;">
+									<a th:href="@{http://localhost:8251/select?method=msg&value=social&pageNum=1}">管理人文社科港信息</a>
+								</div>
+								<div class="card-body" style="margin-top: 15px;margin-left: 15px;">
+									<a th:href="@{http://localhost:8241/insert?method=msg&value=business}">添加商业港信息</a>
+								</div>
+								<div class="card-body" style="margin-top: 15px;margin-left: 15px;">
+									<a th:href="@{http://localhost:8251/select?method=msg&value=business&pageNum=1}">管理商业港信息</a>
+								</div>
+								<div class="card-body" style="margin-top: 15px;margin-left: 15px;">
+									<a th:href="@{http://localhost:8241/insert?method=msg&value=science}">添加科学港信息</a>
+								</div>
+								<div class="card-body" style="margin-top: 15px;margin-left: 15px;">
+									<a th:href="@{http://localhost:8251/select?method=msg&value=science&pageNum=1}">管理科学港信息</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-8">
+					
+					<table class="table table-hover">
+						<thead>
+							<tr>
+								<th>
+									标题
+								</th>
+								<th>
+									内容
+								</th>
+								<th>
+									图片
+								</th>
+								<th>
+									修改日期
+								</th>
+								<th>
+									操作
+								</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							<tr th:each="fv:${list}">
+								<td th:text="${fv.title}">
+								</td>
+								<td th:text="${fv.context}">
+								</td>
+								<td th:text="${fv.img}">
+								</td>
+								<td th:text="${fv.date}">
+								</td>
+								<td>
+									<a th:href="@{http://localhost:8261/updata(method=${method},value=${value},id=${fv.id})}">编辑</a>|
+									<a th:href="@{http://localhost:8271/delete(method=${method},value=${value},title=${fv.title},id=${fv.id})}">删除</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<!-- 非首页非末页 -->
+					<nav th:if="${pageNum} > 1 and ${pageNum} < ${totalPages}">
+						<div>
+							<ul class="pagination">
+								<li class="page-item">
+									<a class="page-link" th:href="@{http://localhost:8251/select(method=${method},value=${value},pageNum=${pageNum}-1)}">上一页</a>
+								</li>
+								<li class="page-item">
+									<div class="page-link"><font th:text="${pageNum}"></font>/<font th:text="${totalPages}"></font></div>
+								</li>
+								<li class="page-item">
+									<a class="page-link" th:href="@{http://localhost:8251/select(method=${method},value=${value},pageNum=${pageNum}+1)}">下一页</a>
+								</li>
+							</ul>						
+						</div>
+					</nav>
+					
+					<!-- 首页 -->
+					<nav th:if="${pageNum} == 1 and ${pageNum} != ${totalPages}">
+						<div>
+							<ul class="pagination">
+								<li class="page-item">
+									<div class="page-link"><font th:text="${pageNum}"></font>/<font th:text="${totalPages}"></font></div>
+								</li>
+								<li class="page-item">
+									<a class="page-link" th:href="@{http://localhost:8251/select(method=${method},value=${value},pageNum=${pageNum}+1)}">下一页</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					
+					<!-- 末页 -->
+					<nav th:if="${pageNum} == ${totalPages} and ${pageNum} != 1">
+						<div>
+							<ul class="pagination">
+								<li class="page-item">
+									<a class="page-link" th:href="@{http://localhost:8251/select(method=${method},value=${value},pageNum=${pageNum}-1)}">上一页</a>
+								</li>
+								<li class="page-item">
+									<div class="page-link"><font th:text="${pageNum}"></font>/<font th:text="${totalPages}"></font></div>
+								</li>
+							</ul>
+						</div>
+					</nav>
+									 
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

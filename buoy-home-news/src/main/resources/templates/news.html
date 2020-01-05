@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>具体新闻项目</title>
+
+<meta name="description"
+	content="Source code generated using layoutit.com">
+<meta name="author" content="LayoutIt!">
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="row">
+					<div class="col-md-12" style="margin-top: 5px;">
+						<div class="row">
+							<div class="col-md-8">
+								<nav class="navbar navbar-expand-lg navbar-light bg-light">
+									<button class="navbar-toggler" type="button"
+										data-toggle="collapse"
+										data-target="#bs-example-navbar-collapse-1">
+										<span class="navbar-toggler-icon"></span>
+									</button>
+									<a class="navbar-brand"
+										th:href="@{http://localhost:8131/index(usersname=${usersname})}">菜单</a>
+									<div class="collapse navbar-collapse"
+										id="bs-example-navbar-collapse-1">
+										<ul class="navbar-nav">
+											<li class="nav-item active"><a class="nav-link"
+												th:href="@{http://localhost:8141/go(usersname=${usersname})}">启航
+													<span class="sr-only">(current)</span>
+											</a></li>
+											<li class="nav-item"><a class="nav-link"
+												th:href="@{http://localhost:8161/buoy(usersname=${usersname})}">浮标</a>
+											</li>
+											<li class="nav-item"><a class="nav-link"
+												th:href="@{http://localhost:8191/news(usersname=${usersname},method=viewpager,value=frist_viewpager,title=${FristViewPagerTitle})}">新闻</a>
+											</li>
+											<li class="nav-item"><a class="nav-link"
+												th:href="@{http://localhost:8221/about(usersname=${usersname})}">关于我们</a>
+											</li>
+										</ul>
+									</div>
+								</nav>
+							</div>
+							<a th:href="@{http://localhost:8201/set(usersname=${usersname})}">
+								<div class="col-md-4">
+									<img alt="图片因网络问题无法显示" id="img" class="rounded-circle"
+										height="50" width="50">
+								</div>
+								<h3 th:text="${nickname}"></h3>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div id="card-271384">
+
+							<div class="card">
+								<div class="card-header">
+									<a class="card-link collapsed" data-toggle="collapse"
+										data-parent="#card-271384" href="#card-element-409590">头条报道</a>
+								</div>
+								<div id="card-element-409590" class="collapse">
+									<div class="card-body" style="margin: 10px;">
+										<a
+											th:href="@{http://localhost:8191/news(usersname=${usersname},method=viewpager,value=frist_viewpager,title=${FristViewPagerTitle})}"><font
+											th:text="${FristViewPagerTitle}"></font></a>
+									</div>
+								</div>
+							</div>
+
+							<div class="card">
+								<div class="card-header">
+									<a class="card-link collapsed" data-toggle="collapse"
+										data-parent="#card-271384" href="#card-element-409591">重点报道</a>
+								</div>
+								<div id="card-element-409591" class="collapse">
+									<div class="card-body" style="margin: 10px;"
+										th:each="v:${ViewPagerList}">
+										<a
+											th:href="@{http://localhost:8191/news(usersname=${usersname},method=viewpager,value=edit,title=${v.title})}"><font
+											th:text="${v.title}"></font></a>
+									</div>
+								</div>
+							</div>
+
+							<div class="card">
+								<div class="card-header">
+									<a class="card-link collapsed" data-toggle="collapse"
+										data-parent="#card-271384" href="#card-element-409592">视野港报道</a>
+								</div>
+								<div id="card-element-409592" class="collapse">
+									<div class="card-body" style="margin: 10px;"
+										th:each="nh:${NewsHorizonList}">
+										<a
+											th:href="@{http://localhost:8191/news(usersname=${usersname},method=news,value=horizon,title=${nh.title})}"><font
+											th:text="${nh.title}"></font></a>
+									</div>
+								</div>
+							</div>
+
+							<div class="card">
+								<div class="card-header">
+									<a class="card-link collapsed" data-toggle="collapse"
+										data-parent="#card-271384" href="#card-element-308784">能力港报道</a>
+								</div>
+								<div id="card-element-308784" class="collapse">
+									<div class="card-body" style="margin: 10px;"
+										th:each="na:${NewsAbilityList}">
+										<a
+											th:href="@{http://localhost:8191/news(usersname=${usersname},method=news,value=ability,title=${na.title})}"><font
+											th:text="${na.title}"></font></a>
+									</div>
+								</div>
+							</div>
+
+							<div class="card">
+								<div class="card-header">
+									<a class="card-link collapsed" data-toggle="collapse"
+										data-parent="#card-271384" href="#card-element-308785">社科人文港报道</a>
+								</div>
+								<div id="card-element-308785" class="collapse">
+									<div class="card-body" style="margin: 10px;"
+										th:each="ns:${NewsSocialList}">
+										<a
+											th:href="@{http://localhost:8191/news(usersname=${usersname},method=news,value=social,title=${ns.title})}"><font
+											th:text="${ns.title}"></font></a>
+									</div>
+								</div>
+							</div>
+
+							<div class="card">
+								<div class="card-header">
+									<a class="card-link collapsed" data-toggle="collapse"
+										data-parent="#card-271384" href="#card-element-308786">商学港报道</a>
+								</div>
+								<div id="card-element-308786" class="collapse">
+									<div class="card-body" style="margin: 10px;"
+										th:each="nb:${NewsBusinessList}">
+										<a
+											th:href="@{http://localhost:8191/news(usersname=${usersname},method=news,value=business,title=${nb.title})}"><font
+											th:text="${nb.title}"></font></a>
+									</div>
+								</div>
+							</div>
+
+							<div class="card">
+								<div class="card-header">
+									<a class="card-link collapsed" data-toggle="collapse"
+										data-parent="#card-271384" href="#card-element-308787">科学港报道</a>
+								</div>
+								<div id="card-element-308787" class="collapse">
+									<div class="card-body" style="margin: 10px;"
+										th:each="nsc:${NewsScienceList}">
+										<a
+											th:href="@{http://localhost:8191/news(usersname=${usersname},method=news,value=science,title=${nsc.title})}"><font
+											th:text="${nsc.title}"></font></a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="jumbotron">
+							<div th:switch="${key}">
+								<h5 margin=5px; th:case="viewpager_frist_viewpager">
+									头条报道> <font th:text="${title}"></font>
+								</h5>
+
+								<h5 margin=5px; th:case="viewpager_edit">
+									重点报道> <font th:text="${title}"></font>
+								</h5>
+
+								<h5 margin=5px; th:case="news_horizon">
+									视野港报道> <font th:text="${title}"></font>
+								</h5>
+
+								<h5 margin=5px; th:case="news_ability">
+									能力港报道> <font th:text="${title}"></font>
+								</h5>
+
+								<h5 margin=5px; th:case="news_social">
+									社会港报道> <font th:text="${title}"></font>
+								</h5>
+
+								<h5 margin=5px; th:case="news_business">
+									商业港报道> <font th:text="${title}"></font>
+								</h5>
+
+								<h5 margin=5px; th:case="news_science">
+									科学港报道> <font th:text="${title}"></font>
+								</h5>
+							</div>
+
+							<h2>
+								<font th:text="${title}"></font>
+							</h2>
+							<p>
+								<font th:text="${context}"></font>
+							</p>
+							<!-- 
+							<p>
+								<a class="btn btn-primary btn-large" href="#">我的观点>></a>
+							</p>
+							 -->
+
+						</div>
+
+						<div class="row" th:if="${key} != 'viewpager_frist_viewpager' ">
+
+							<div class="col-md-4" style="margin: 5px;">
+								<a
+									th:href="@{http://localhost:8391/NewsServlet(usersname=${usersname},method=${method},value=${value},title=${title},action=up)}"><button
+										type="button" class="btn btn-success btn-block">上一篇</button></a>
+							</div>
+
+							<div class="col-md-4"></div>
+
+							<div class="col-md-4" style="margin: 5px;">
+								<a
+									th:href="@{http://localhost:8391/NewsServlet(usersname=${usersname},method=${method},value=${value},title=${title},action=down)}"><button
+										type="button" class="btn btn-success btn-block">下一篇</button> </a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script th:inline="javascript">       
+		document.getElementById('img').src=[[${usersImg}]];
+	</script>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/scripts.js"></script>
+
+
+</body>
+
+</html>

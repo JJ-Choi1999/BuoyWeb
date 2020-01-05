@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>删除界面</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+	<style type="text/css">a {text-decoration: none}</style>
+	
+  </head>
+  <body>
+
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="alert alert-dismissable alert-warning" style="margin:5px;">
+				<h4>
+					提示:
+				</h4> <strong>确定要删除！</strong><font th:text="${key}"></font>条目标题为<font th:text="${title}"></font>吗？<br>
+				 <a th:href="@{http://localhost:8471/DeleteServlet(method=${method},value=${value},id=${id})}" class="alert-link">确定</a>|
+				 <a th:href="@{http://localhost:8251/select(method=${method},value=${value},pageNum=1)}" class="alert-link">取消</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

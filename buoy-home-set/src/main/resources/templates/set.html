@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>我的设置</title>
+
+<meta name="description"
+	content="Source code generated using layoutit.com">
+<meta name="author" content="LayoutIt!">
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+
+<script type="text/javascript">
+    //用户头像
+    function newFile() {
+        var windowURL = window.URL || window.webkitURL;
+        var loadImg = windowURL.createObjectURL(document.getElementById('i-file').files[0]);
+    	document.getElementById('img').setAttribute('src',loadImg);
+	} 
+</script>
+
+</head>
+<body>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<form role="form" action="http://192.168.134.213:8401/SetServlet"
+					method="post" enctype="multipart/form-data">
+					<div class="col-md-12"
+						style="text-align: center; margin-top: 10px; margin-bottom: 10px;">
+						<input type="text" name="usersname" th:value="${usersname}"
+							style="display: none;"> <img id="img"
+							alt="图片因网络问题无法显示"
+							class="rounded-circle" height="80" width="80"
+							onclick="$('#i-file').click();"> <input type="file"
+							id='i-file' name="filename" accept="image/*"
+							onchange="newFile()"
+							style="display: none">
+					</div>
+					<div class="form-group">
+						<label> 昵称: </label> <input name="nickname" type="text"
+							class="form-control" id="exampleInputEmail1"
+							th:value="${nickname}">
+					</div>
+					<div class="form-group">
+						<label> 性别: </label> <input name="sex" type="text"
+							class="form-control" id="exampleInputEmail1" th:value="${sex}">
+					</div>
+					<div class="form-group">
+						<label> 邮箱: </label> <input name="email" type="text"
+							class="form-control" id="exampleInputEmail1" th:value="${email}">
+					</div>
+					<div class="form-group">
+						<label> 手机: </label> <input name="phone" type="text"
+							class="form-control" th:value="${phone}">
+					</div>
+					<button type="submit" class="btn btn-block btn-outline-success">保存</button>
+				</form>
+				<div class="row" style="margin-top: 10px; margin-bottom: 10px;">
+					<div class="col-md-12">
+						<a id="exit"
+							th:href="@{http://192.168.134.213:8131/index(usersname=${usersname})}"
+							style="text-decoration: none;">
+							<button type="button" class="btn btn-block btn-outline-success">返回</button>
+						</a>
+					</div>
+				</div>
+				
+				<div class="row" style="margin-top: 10px; margin-bottom: 10px;">
+					<div class="col-md-12">
+						<a id="exit"
+							th:href="@{http://192.168.134.213:8402/ExitServlet(usersname=${usersname})}"
+							style="text-decoration: none;">
+							<button type="button" class="btn btn-block btn-outline-success">退出</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/scripts.js"></script>
+
+	<script th:inline="javascript">       
+		document.getElementById('img').src=[[${img}]];
+	</script>
+
+</body>
+</html>
